@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+<body>
+  <div id="app">
+    <div class="wrap">
+      <div class="login_wrap">
+        <span class="message">
+          <i class="bi bi-chat-left-text-fill"
+          @click="message"></i>
+        </span>
+        <div class="login_form">
+          <div class="form_text">admin</div>
+          <form action="#">
+            <div class="form_inputBox">
+              <span class="icon">
+                <i class="bi bi-person-fill"></i>
+              </span>
+              <input type="email" class="form_input"
+              placeholder=" " required maxlength="30"
+              v-model="login.username">
+              <span class="ok">格式正確</span>
+              <label class="form_label">Email</label>
+            </div>
+            <div class="form_inputBox">
+              <span class="icon">
+                <i class="bi bi-lock-fill"></i>
+              </span>
+              <input type="password" class="form_input
+              pwd"
+              placeholder=" " required maxlength="30"
+              v-model="login.password">
+              <span class="eye_Icon">
+                <i class="bi bi-eye-slash eyeIcon"></i>
+              </span>
+              <label class="form_label">Password</label>
+            </div>
+            <div class="btnWrap">
+              <button class="btn" type="button"
+              @click="reset">
+                reset
+              </button>
+              <button class="btn" type="button"
+              @click="loginAdmin">
+                login
+              </button>            
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <!-- vue -->
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+  <!-- axios -->
+  <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+
+  <script src="./js/index.js"></script>
+</body>
+</html>

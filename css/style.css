@@ -1,0 +1,161 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+.wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url(../img/bg_02.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 30%;
+}
+
+.login_wrap {
+  position: relative;
+  width: 400px;
+  height: 430px;
+  border: 2px solid #333;  
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(20px);
+  overflow: hidden;
+  margin: 20px;
+}
+
+.message {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  background: #ff4a29;
+  color: #fff;
+  font-size: 1.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom-left-radius: 20px;
+  cursor: pointer;
+}
+
+.login_form {
+  width: 100%;
+  padding: 40px;
+}
+
+.form_text {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  color: #ff4a29;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  -webkit-text-stroke: 1px #ffe033;
+}
+.form_inputBox {
+  position: relative;
+  width: 100%;
+  height: 50px;  
+  border-bottom: 2px solid #000;
+  margin: 50px 0;
+}
+
+.form_input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  outline: none;
+  border: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: .5px;
+  margin-left: 12%;
+  padding-right: 25%;
+}
+.ok {
+  position: absolute;
+  bottom: -30px;
+  right: 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #0e3;
+}
+
+.form_label {
+  position: absolute;
+  top: 50%;
+  left: 12%;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: capitalize;
+  color: #000;
+  transition: .3s ease;
+  pointer-events: none;
+}
+
+.icon {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  font-size: 1.5rem;
+}
+
+.eye_Icon {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.btnWrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4px;
+}
+.btn {
+  width: 100%;
+  padding: 10px;
+  background: transparent;
+  border: 2px solid #000;
+  border-radius: 10px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #000;
+  cursor: pointer;
+  transition: .3s ease;
+}
+.btn:hover {
+  background: #000;
+  color: #fff;
+}
+
+.form_input:focus ~ .form_label {
+  top: -10px;
+  font-size: 1rem;  
+}
+
+.form_input:not(:placeholder-shown).form_input:not(:focus) ~ .form_label {
+  top: -10px;
+  font-size: 1rem;
+  color: #ff4a29;
+}
+
+
+.form_input:valid ~ .ok {
+  display: block;
+}
+
+.form_input:invalid ~ .ok {
+  display: none;
+}
